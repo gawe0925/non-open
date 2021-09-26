@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% extends 'store/main.html' %}
+{% load static %}
+{% block title %}
+    <title>Login</title>
+{% endblock %}
+{% block content %}
+    <div class="form-field" style="display: inline-block">
+        <form method="POST" action="" class="login-form">
+            {% csrf_token %}
+
+            <style type="text/css">
+                .form-control:focus{
+                    box-shadow: none;
+                    background: none;
+                    margin-left: -7px;
+                }
+            </style>
+
+            <h1>Login</h1>
+
+            <div class="txtb form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput typing" name="username" placeholder="Username">
+              <label class="label" for="floatingInput">Email address</label>
+            </div>
+            <div class="txtb form-floating">
+              <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+              <label class="label" for="floatingPassword">Password</label>
+            </div>
+
+            <button type="submit" class="logbtn" value="Login">Login</button>
+            <br/>
+
+            {% for message in messages %}
+                <a class="message_error nowrap d-flex" id="messages.error">&ensp;{{ message }}&ensp;</a>
+            {% endfor %}
+
+
+        </form>
+
+    </div>
+
+{% endblock content %}

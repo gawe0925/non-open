@@ -1,0 +1,21 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+    <style>
+    body{
+        background-color: #333333;
+    }
+    </style>
+<div class="payout">
+    <div class="payoutimg">
+        <img src="{% static "images/payout.gif" %}" alt="payout" class="mianimg">
+    </div>
+    <div class="payout-main">
+        <p class="pcontain">
+            Sorry, not for sale.<br>
+            Because we are non-open.
+        </p>
+    </div>
+    <a class="redir" href="/" type="button">Back to Store</a>
+</div>
+{% endblock %}
