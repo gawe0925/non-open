@@ -259,6 +259,10 @@ h1,h2,h3,h4,h5,h6{
 	left: 2px;
 }
 
+.text-t{
+	margin-top: 30px;
+}
+
 /* login */
 
 .login-form{
