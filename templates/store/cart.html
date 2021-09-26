@@ -43,8 +43,23 @@
 
                 {% for item in items %}
                 <div class="cart-row cart-summary">
-                    <div style="flex: 2"><img class="row-image"
-                                              src="{{ item.product.imageURL }}"></div>
+                    <div style="flex: 2">
+
+                        {% if item.product.id == 1 %}
+                            <img class="row-image" src="{% static 'images/duck.jpg' %}" alt="duck">
+                        {% elif item.product.id == 2 %}
+                            <img class="row-image" src="{% static 'images/trash.jpg' %}" alt="trash">
+                        {% elif item.product.id == 4 %}
+                            <img class="row-image" src="{% static 'images/whee.jpg' %}" alt="whee">
+                        {% elif item.product.id == 5 %}
+                            <img class="row-image" src="{% static 'images/iphone.jpg' %}" alt="iphone">
+                        {% elif item.product.id == 6 %}
+                            <img class="row-image" src="{% static 'images/water.jpg' %}" alt="water">
+                        {% elif item.product.id == 7 %}
+                            <img class="row-image" src="{% static 'images/hello.png' %}" alt="hello">
+                        {% endif %}
+
+                    </div>
                     <div class="summery" style="flex: 2">{{ item.product.name }}</div>
                     <div class="summery" style="flex: 1">${{ item.product.price|floatformat:2 }}</div>
                     <div style="flex: 1">

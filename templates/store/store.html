@@ -7,7 +7,19 @@
     <div class="row">
         {% for product in products %}
         <div class="col-lg-4">
-            <img class="thumbnail" src="{{ product.imageURL }}">
+            {% if product.id == 1 %}
+                <img class="thumbnail" src="{% static 'images/duck.jpg' %}" alt="duck">
+            {% elif product.id == 2 %}
+                <img class="thumbnail" src="{% static 'images/trash.jpg' %}" alt="trash">
+            {% elif product.id == 4 %}
+                <img class="thumbnail" src="{% static 'images/whee.jpg' %}" alt="whee">
+            {% elif product.id == 5 %}
+                <img class="thumbnail" src="{% static 'images/iphone.jpg' %}" alt="iphone">
+            {% elif product.id == 6 %}
+                <img class="thumbnail" src="{% static 'images/water.jpg' %}" alt="water">
+            {% elif product.id == 7 %}
+                <img class="thumbnail" src="{% static 'images/hello.png' %}" alt="hello">
+            {% endif %}
             <div class="box-element product">
                 <h6 class="product-name"><strong>{{ product.name }}</strong></h6>
                 <br>
