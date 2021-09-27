@@ -5,6 +5,7 @@ import json, datetime
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .utils import *
+from django.contrib import messages
 
 
 def store(request):
@@ -112,6 +113,12 @@ def user_login(request):
 
     context = {}
     return render(request, 'store/login.html', context)
+
+
+def user_signup(requset):
+    messages.error(requset, 'Sorry register is prohibited')
+    context = {}
+    return render(requset, 'store/signup.html', context)
 
 
 def user_logout(request):

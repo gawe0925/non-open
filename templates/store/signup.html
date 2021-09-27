@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% extends 'store/main.html' %}
+{% load static %}
+{% block title %}
+    <title>Sign up</title>
+{% endblock %}
+{% block content %}
+<div class="form-field">
+        <form method="POST" action="" class="singup-form">
+            {% csrf_token %}
+
+            <style type="text/css">
+                .form-control:focus{
+                    box-shadow: none;
+                    background: none;
+                    margin-left: -7px;
+                }
+            </style>
+
+            <h1>Sign up</h1>
+
+            {% for message in messages %}
+                <a id="messages.error1">&ensp;{{ message }}&ensp;</a>
+            {% endfor %}
+
+            <div class="txtb form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" name="username" placeholder="Username">
+              <label class="label" for="floatingInput">User name</label>
+            </div>
+            <div class="txtb form-floating">
+              <input type="email" class="form-control" id="floatingEmail" name="email" placeholder="Email">
+              <label class="label" for="floatingPassword">Email</label>
+            </div>
+            <div class="txtb form-floating">
+              <input type="password" class="form-control" id="floatingPassword" name="password1" placeholder="Password1">
+              <label class="label" for="floatingPassword">Password</label>
+            </div>
+            <div class="txtb form-floating">
+              <input type="password" class="form-control" id="floatingPassword" name="password2" placeholder="Password2">
+              <label class="label" for="floatingPassword">Confirm password</label>
+            </div>
+
+            <button type="submit" class="signbtn" name="signup" value="signup">Sign up</button>
+
+
+
+
+            <div class="s-buttom-text">
+                <a>Already have an account ?</a><a href="/login"> Login</a></p>
+            </div>
+        </form>
+</div>
+{% endblock %}

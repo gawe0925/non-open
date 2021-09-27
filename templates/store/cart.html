@@ -17,8 +17,12 @@
                         <th><h5><strong>Item: </strong><strong>{{ order.get_cart_items }}</strong></h5></th>
                         <th><h5><strong>Total: </strong><strong>${{ order.get_cart_total|floatformat:2 }}</strong></h5></th>
                         <th>
-                            <a style="float: right; margin: -5px 25px" class="btn btn-success"
-                               href="/checkout">Check out</a>
+                            {% if order.get_cart_items >= 1 %}
+                                <a style="float: right; margin: -7px 25px" class="btn btn-success"
+                                   href="/checkout">Check out</a>
+                            {% else %}
+                                <a></a>
+                            {% endif %}
                         </th>
                     </tr>
                 </table>
