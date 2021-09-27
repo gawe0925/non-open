@@ -116,7 +116,7 @@ def user_login(request):
 
 
 def user_signup(requset):
-    messages.error(requset, 'Sorry register is prohibited')
+    messages.error(requset, 'Register is prohibited')
     context = {}
     return render(requset, 'store/signup.html', context)
 

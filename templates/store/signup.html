@@ -5,6 +5,14 @@
     <title>Sign up</title>
 {% endblock %}
 {% block content %}
+    <style>
+        #cart-icon{
+            display: none;
+        }
+        #cart-total{
+            display: none;
+        }
+    </style>
 <div class="form-field">
         <form method="POST" action="" class="singup-form">
             {% csrf_token %}
@@ -24,19 +32,19 @@
             {% endfor %}
 
             <div class="txtb form-floating mb-3">
-              <input type="text" class="form-control" id="floatingInput" name="username" placeholder="Username">
+              <input type="text" class="form-control sl" id="floatingInput" name="username" placeholder="Username">
               <label class="label" for="floatingInput">User name</label>
             </div>
             <div class="txtb form-floating">
-              <input type="email" class="form-control" id="floatingEmail" name="email" placeholder="Email">
+              <input type="email" class="form-control sl" id="floatingEmail" name="email" placeholder="Email">
               <label class="label" for="floatingPassword">Email</label>
             </div>
             <div class="txtb form-floating">
-              <input type="password" class="form-control" id="floatingPassword" name="password1" placeholder="Password1">
+              <input type="password" class="form-control sl" id="floatingPassword" name="password1" placeholder="Password1">
               <label class="label" for="floatingPassword">Password</label>
             </div>
             <div class="txtb form-floating">
-              <input type="password" class="form-control" id="floatingPassword" name="password2" placeholder="Password2">
+              <input type="password" class="form-control sl" id="floatingPassword" name="password2" placeholder="Password2">
               <label class="label" for="floatingPassword">Confirm password</label>
             </div>
 

@@ -5,6 +5,14 @@
     <title>Login</title>
 {% endblock %}
 {% block content %}
+    <style>
+        #cart-icon{
+            display: none;
+        }
+        #cart-total{
+            display: none;
+        }
+    </style>
     <div class="form-field" style="display: inline-block">
         <form method="POST" action="" class="login-form">
             {% csrf_token %}
@@ -24,7 +32,7 @@
               <label class="label" for="floatingInput">Email address</label>
             </div>
             <div class="txtb form-floating">
-              <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+              <input type="password" class="flp form-control" id="floatingPassword" name="password" placeholder="Password">
               <label class="label" for="floatingPassword">Password</label>
             </div>
 

@@ -26,7 +26,6 @@ header{
 	align-items: center;
 	padding: 30px 10%;
 	margin-bottom: -4rem;
-
 }
 
 .logo{
@@ -117,13 +116,13 @@ header{
 
 	.nav{
 		display: none;
-		position: absolute;
+		position: fixed;
 		justify-content: center;
 		text-align: center;
 		top: 8rem;
 		left: auto;
 		border-bottom: 4px solid #15616d;
-		width: 70%;
+		width: 85%;
 		background: #fffcf2;
 		border-radius: 10px;
 		z-index: 1;
@@ -137,7 +136,7 @@ header{
 		width: 100%;
 		height: 100%;
 		margin: 0;
-		padding: 15px;
+		padding: 30px;
 		color: #534b52;
 		text-align: center;
 	}
@@ -168,8 +167,9 @@ header{
 		cursor: pointer;
 		float: right;
 		padding: 10px 6px;
-		position: relative;
+		position: absolute;
 		user-select: none;
+		z-index: 1;
 	}
 
 	nav .tbi .bar{
@@ -400,7 +400,7 @@ header{
 
 .login-form{
     width: 375px;
-    background: #333533;
+    background: #bdbbb6;
     height: 600px;
     padding: 80px 40px;
     border-radius: 10px;
@@ -413,7 +413,7 @@ header{
 .login-form h1{
     text-align: center;
     margin-bottom: 60px;
-	color: #f1f1f1;
+	color: #333333;
 }
 
 .txtb{
@@ -424,7 +424,7 @@ header{
 
 .txtb input{
     font-size: 15px;
-    color: #f1f1f1;
+    color: #333333;
     border: none;
     width: 100%;
     outline: none;
@@ -438,7 +438,7 @@ header{
     width: 100%;
     height: 50px;
     border: none;
-    background-image: linear-gradient(120deg,#c4bfaf,#284b63,#d5d6c9);
+    background-image: linear-gradient(120deg,#847577,#a6a2a2,#847577);
     background-size: 200%;
     font-size: 18px;
     color: #f5efda;
@@ -470,11 +470,11 @@ header{
     box-shadow: none;
     background: none;
     margin-left: -7px;
-	color: #f1f1f1;
+	color: #333333;
 }
 
 .label{
-    color: #f1f1f1;
+    color: #294c60;
     font-size: 15px;
     margin-left: -7px;
 	margin-top: -7px;
@@ -490,7 +490,67 @@ header{
 	justify-content: center;
 }
 
-/* end */
+/* login end */
+
+/* signup */
+
+.singup-form{
+    width: 375px;
+    background: #bdbbb6;
+    height: 680px;
+    padding: 50px 40px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.singup-form h1{
+    text-align: center;
+    margin-bottom: 50px;
+	color: #333333;
+}
+
+.signbtn{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-image: linear-gradient(120deg,#847577,#a6a2a2,#847577);
+    background-size: 200%;
+    font-size: 18px;
+    color: #f2f5fa;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+	border-radius: 15px;
+}
+
+.signbtn:hover{
+    background-position: right;
+}
+
+.s-buttom-text{
+	margin-top: 5px;
+    text-align: center;
+    font-size: 15px;
+	color: #333333;
+}
+
+#messages\.error1{
+	font-size: 18px;
+	color: #f1f1f1;
+	text-decoration: none;
+	background-color: #cc444b;
+	border-radius: 5px;
+	position: relative;
+	left: 2.3rem;
+	top: 8px;
+}
+
+/* end signup */
+
 
 /* payout */
 .payout{
@@ -542,61 +602,3 @@ header{
 	color: #fff3b0;
 }
 /* end payout */
-
-/* signup */
-
-.singup-form{
-    width: 375px;
-    background: #333533;
-    height: 680px;
-    padding: 50px 40px;
-    border-radius: 10px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.singup-form h1{
-    text-align: center;
-    margin-bottom: 50px;
-	color: #f1f1f1;
-}
-
-.signbtn{
-    display: block;
-    width: 100%;
-    height: 50px;
-    border: none;
-    background-image: linear-gradient(120deg,#d4c7b0,#985f6f,#d4c7b0);
-    background-size: 200%;
-    font-size: 18px;
-    color: #f5efda;
-    outline: none;
-    cursor: pointer;
-    transition: 0.5s;
-	border-radius: 15px;
-}
-
-.signbtn:hover{
-    background-position: right;
-}
-
-.s-buttom-text{
-	margin-top: 5px;
-    text-align: center;
-    font-size: 15px;
-	color: #333333;
-}
-
-#messages\.error1{
-	font-size: 18px;
-	color: #f1f1f1;
-	text-decoration: none;
-	background-color: #cc444b;
-	border-radius: 5px;
-	position: relative;
-	left: 1.3rem;
-	top: 8px;
-}
-/* end signup */
