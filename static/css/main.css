@@ -52,7 +52,7 @@ header{
 }
 
 .nav li a:hover{
-	color: #c0d6df;
+	color: #5296a5;
 }
 
 #cart-icon{
@@ -257,11 +257,6 @@ header{
 	object-fit: contain;
 	background: #fff;
 	border-radius: 5px;
-}
-
-.bg-dark{
-	background-color: #343a40!important;
-	line-height: 30px;
 }
 
 .col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12{
